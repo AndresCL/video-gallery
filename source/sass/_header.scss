@@ -1,0 +1,13 @@
+header{
+    background-color: $primary-color;
+    color: $primary-color-text;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h3{
+        margin: 0px;
+        font-size: large;
+    }
+}

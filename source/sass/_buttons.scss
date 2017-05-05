@@ -1,0 +1,42 @@
+.btn-login{
+    background-color: $accent-color;
+    border-style: none;
+    color: $primary-color-text;
+    cursor: pointer;
+    font-size: 16px;
+    height: 45px;
+    padding: 8px;
+    transition: all 0.5s;
+    width: 154px;
+    position: relative;
+    
+    @include radius;
+}
+
+.btn-login span{
+    transition: all 0.5s;
+}
+
+.btn-login span:after {
+    content: '\2023';
+    position: absolute;
+    opacity: 0;
+    top: 14px;
+    right: 40px;
+    transition: 0.5s;
+
+    background-color: $primary-color;
+    border-radius: 30px;
+    width: 20px;
+    height: 20px;
+}
+
+.btn-login:hover span {
+    padding-right: 25px;
+}
+
+.btn-login:hover span:after {
+    opacity: 1;
+    right: 0;
+    right: 40px;
+}

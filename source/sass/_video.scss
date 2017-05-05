@@ -1,0 +1,164 @@
+#video-container, #videos-container { 
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    .video-item {
+        width: 25%;
+        text-align: center;
+        margin-bottom: 40px;
+
+        a.video-link {
+            color: $primary-text-color;
+            text-decoration: none;
+
+            &:hover {
+                color: $accent-color;
+            }
+        }
+
+        .description {
+            color: $secondary-text-color;
+            font-size: x-small;
+        }
+
+        h5, video, .rating, .description{
+            margin: 0 auto;
+            width: 90%;
+        }
+
+        h5{
+            height: 40px;
+            margin-bottom: 0px;
+        }
+
+        .rating{
+
+            .star-selected{
+                background-size: 20px;
+                background-image: url(../img/star_selected.png);
+                cursor: pointer;
+                display: inline-block;
+                height: 20px;   
+                width: 20px;
+
+                &:hover {
+                    @include jumping;
+                }
+            }
+
+            .star-unselected{
+
+                background-size: 20px;
+                background-image: url(../img/star_unselected.png);
+                cursor: pointer;
+                display: inline-block;
+                height: 20px;
+                width: 20px;
+                
+                &:hover {
+                    @include jumping;
+                }
+            }
+
+            .star-jumping{
+
+                background-size: 20px;
+                cursor: pointer;
+                display: inline-block;
+                height: 20px;
+                width: 20px;
+                @include jumping;
+            }
+        }
+    }
+}
+
+#video-container{
+
+    article.video-item {
+        width: 75%;
+
+        .video-link {
+
+            &:hover {
+                color: $primary-text-color;
+            }
+        }
+    }
+    article.video-item.aside-item{
+        .video-link {
+            
+            &:hover {
+                color: $accent-color;
+            }
+        }
+    }
+    aside {
+        width: 25%;
+    }
+}
+
+@media(max-width: 425px){
+    
+    #videos-container{
+        .video-item{
+            width: 100%;
+        }
+    }
+
+    #video-container{
+    
+        article.video-item {
+            width: 100%;
+        }
+        aside {
+            width: 100%;
+        }
+    }
+}
+
+@media(min-width: 425px) and (max-width: 767px){
+    
+    #videos-container{
+        .video-item{
+            width: 50%;
+        }
+    }
+
+    #video-container{
+    
+        article.video-item {
+            width: 100%;
+        }
+        aside {
+            width: 100%;
+        }
+    }
+}
+
+@media(min-width: 768px){
+    
+    #videos-container{
+        .video-item{
+            width: 25%;
+        }
+    }
+
+    #video-container{
+    
+        article.video-item {
+            width: 75%;
+        }
+        aside {
+            width: 25%;
+        }
+    }
+}
+
+@keyframes animation-rate {
+    0%   { cursor: pointer; transform: translateY(0);}
+    65%  { cursor: pointer; transform: translateY(-8px);}
+    100% { cursor: pointer; transform: translateY(0px);}
+}

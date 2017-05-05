@@ -1,0 +1,19 @@
+@import 'variables'; 
+@import 'mixin_a'; 
+
+@import 'header'; 
+@import 'nav'; 
+@import 'sections'; 
+@import 'buttons'; 
+@import 'modal'; 
+@import 'video';
+
+
+body{
+    margin: 0px;
+    font-family: 'Open Sans';
+}
+
+main{
+    padding: 10px;
+} 

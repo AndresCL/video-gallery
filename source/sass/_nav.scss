@@ -1,0 +1,22 @@
+nav{
+    background-color: $primary-color-dark;
+
+    ul{
+        list-style-type: none;
+        margin: 0px;
+        -webkit-margin-end: 40px;
+
+        li{
+            display: inline-block;
+
+            a{
+                font-size: 12px;
+                @include link-white;
+            }
+        }
+
+        li:last-child{
+            float:right;
+        }
+    } 
+}

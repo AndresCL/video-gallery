@@ -1,0 +1,16 @@
+@mixin link-white() {
+    color: $primary-color-text;
+    text-decoration: none;
+}
+
+@mixin radius(){
+    border-radius: 5px;
+}
+
+@mixin jumping(){
+    cursor: pointer;
+    background-image: url(../img/star_rate.png);
+    animation-name: animation-rate;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}

@@ -1,0 +1,17 @@
+.login{
+    font-size: 18px; 
+    text-align: center;
+    
+    input[type="text"], input[type="password"],{
+
+        border: 1px solid $divider-color;
+        color: $primary-text-color;        
+        display: block;
+        font-size: 18px;
+        height: 45px;   
+        margin: 10px auto;
+        width: 150px; 
+
+        @include radius;
+    }
+}
